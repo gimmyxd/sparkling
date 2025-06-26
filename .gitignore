@@ -22,6 +22,7 @@ spark-ui/*.ntvs*
 spark-ui/*.njsproj
 spark-ui/*.sln
 spark-ui/*.sw?
+!spark-ui
 
 __pycache__
 .vscode
