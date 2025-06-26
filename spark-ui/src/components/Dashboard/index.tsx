@@ -205,13 +205,11 @@ const SparkDashboard = () => {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-200">
-                  <th className="text-left py-3 px-2 text-sm font-medium text-gray-500">
+                  <th className="text-left py-3 px-2 font-medium text-gray-500">
                     Job Type
                   </th>
-                  <th className="py-3 px-2 text-sm font-medium text-gray-500">
-                    Count
-                  </th>
-                  <th className="py-3 px-2 text-sm font-medium text-gray-500">
+                  <th className="py-3 px-2 font-medium text-gray-500">Count</th>
+                  <th className="py-3 px-2 font-medium text-gray-500">
                     % of Total
                   </th>
                 </tr>
