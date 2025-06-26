@@ -8,7 +8,6 @@ import {
   XAxis,
   YAxis,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 import {
   Activity,
@@ -191,7 +190,6 @@ const SparkDashboard = () => {
               >
                 <XAxis dataKey="name" />
                 <YAxis allowDecimals={false} />
-                <Legend />
                 <Bar dataKey="value">
                   {statusData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.fill} />
