@@ -1,0 +1,27 @@
+# Logs
+spark-ui/logs
+spark-ui/*.log
+spark-ui/npm-debug.log*
+spark-ui/yarn-debug.log*
+spark-ui/yarn-error.log*
+spark-ui/pnpm-debug.log*
+spark-ui/lerna-debug.log*
+spark-ui/
+spark-ui/node_modules
+spark-ui/dist
+spark-ui/dist-ssr
+spark-ui/*.local
+spark-ui/
+spark-ui/# Editor directories and files
+spark-ui/.vscode/*
+spark-ui/!.vscode/extensions.json
+spark-ui/.idea
+spark-ui/.DS_Store
+spark-ui/*.suo
+spark-ui/*.ntvs*
+spark-ui/*.njsproj
+spark-ui/*.sln
+spark-ui/*.sw?
+
+__pycache__
+.vscode
