@@ -42,7 +42,7 @@ const SparkDashboard = () => {
     );
   if (error || !stats)
     return (
-      <div className="min-h-screen flex items-center justify-center text-red-600">
+      <div className="min-h-screen flex items-center justify-center text-red-400">
         {error?.message || "No data"}
       </div>
     );
@@ -51,20 +51,20 @@ const SparkDashboard = () => {
     {
       name: "Completed",
       value: stats.overview.completed_jobs,
-      fill: "#10B981",
+      fill: "#85929E",
       icon: <CheckCircle className="w-4 h-4 text-green-600" />,
     },
     {
       name: "Running",
       value: stats.overview.running_jobs,
-      fill: "#F59E0B",
+      fill: "#F7DC6F",
       icon: <PlayCircle className="w-4 h-4 text-yellow-600" />,
     },
     {
       name: "Failed",
       value: stats.overview.failed_jobs,
-      fill: "#EF4444",
-      icon: <XCircle className="w-4 h-4 text-red-600" />,
+      fill: "#F1948A",
+      icon: <XCircle className="w-4 h-4 text-red-400" />,
     },
   ];
 
@@ -236,52 +236,6 @@ const SparkDashboard = () => {
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-              Errors & Warnings
-            </h3>
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-red-500" />
-                <span className="text-gray-900 font-semibold">Errors:</span>
-                <span className="text-red-600">
-                  {stats.errors.total_errors}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5 text-yellow-500" />
-                <span className="text-gray-900 font-semibold">Warnings:</span>
-                <span className="text-yellow-600">
-                  {stats.errors.total_warnings}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-              Recent Activity (24h)
-            </h3>
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <Activity className="w-5 h-5 text-yellow-500" />
-                <span className="text-gray-900 font-semibold">Jobs:</span>
-                <span className="text-yellow-600">
-                  {stats.recent_activity.jobs_last_24h}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <XCircle className="w-5 h-5 text-red-500" />
-                <span className="text-gray-900 font-semibold">Failures:</span>
-                <span className="text-red-600">
-                  {stats.recent_activity.failures_last_24h}
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
