@@ -69,10 +69,10 @@ const Jobs = () => {
   return (
     <>
       <div
-        className="fixed top-14 left-0 w-full z-40 bg-white shadow flex flex-wrap items-center gap-4 mb-4 p-6 border-b border-gray-100"
+        className="pl-8 pr-8 pt-8 fixed top-14 left-0 w-full z-40 bg-white shadow flex flex-wrap items-center gap-4 mb-4 p-6 border-b border-gray-100"
         style={{ minHeight: 58 }}
       >
-        <label className="text-sm font-medium text-gray-700">Status:</label>
+        <label className="text-sm font-medium text-gray-700">Status</label>
         <select
           className="border rounded px-2 py-1 text-sm"
           value={jobStatusFilter}
@@ -138,11 +138,8 @@ const Jobs = () => {
         </button>
       </div>
 
-      <div
-        className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8"
-        style={{ marginTop: 112 }}
-      >
-        <div className="overflow-x-auto h-[76vh]">
+      <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mt-26">
+        <div className="overflow-x-auto h-[76vh] pt-4">
           <table className="w-full">
             <thead className="sticky top-0 bg-white">
               <tr className="border-b border-gray-200">

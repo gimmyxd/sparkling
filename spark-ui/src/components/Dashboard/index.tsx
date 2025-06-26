@@ -87,11 +87,8 @@ const SparkDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50 transition-all duration-300">
       <div className="px-6 py-6 pt-20">
-        <div className="flex items-center justify-between mb-2">
-          <h1 className="text-2xl font-bold text-gray-900">
-            Enterprise Spark Overview
-          </h1>
-          <span className="text-sm text-gray-500">
+        <div className="flex items-center justify-end mb-2">
+          <span className="text-sm text-gray-500 p-4 right">
             Last updated: {new Date(stats.last_updated).toLocaleString()}
           </span>
         </div>

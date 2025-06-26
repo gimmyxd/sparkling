@@ -1,7 +1,11 @@
 import { Zap } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { RotateCcw, Loader2 } from "lucide-react";
+import { useStats } from "../../api/stats";
 
 const Nav = () => {
+  const { refetch, isFetching } = useStats();
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
@@ -25,7 +29,7 @@ const Nav = () => {
                   : "text-gray-500 hover:text-gray-700 font-medium pb-1"
               }
             >
-              Overview
+              Dashboard
             </NavLink>
             <NavLink
               to="/jobs"
@@ -39,6 +43,17 @@ const Nav = () => {
             </NavLink>
           </div>
         </div>
+        <button
+          className="ml-4 p-2 rounded hover:bg-gray-50 transition disabled:opacity-50 flex items-center"
+          onClick={() => refetch()}
+          disabled={isFetching}
+        >
+          {isFetching ? (
+            <Loader2 className="w-5 h-5 animate-spin text-gray-600" />
+          ) : (
+            <RotateCcw className="w-5 h-5 text-gray-600" />
+          )}
+        </button>
       </div>
     </nav>
   );
